@@ -20,7 +20,7 @@ public class Main {
     servers.add(server3);
     servers.add(server4);
 
-    LoadBalancer loadBalancer = new LoadBalancer(servers, ALGORITHMS.ROUND_ROBIN);
+    LoadBalancer loadBalancer = new LoadBalancer(servers, ALGORITHMS.RANDOM);
 
     for(int i=0; i<20; i++) {
       loadBalancer.assign(new Request("GET", "/hello"));
